@@ -17,11 +17,7 @@ connectCloudinary();
 
 //middel ware
 app.use(express.json())
-app.use(cors({
-    origin: 'https://medical-scheduling-system-admin.onrender.com',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-}))
+app.use(cors())
 
 // api endpoint
 app.use('/api/admin',adminRouter)
